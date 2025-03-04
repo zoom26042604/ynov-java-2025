@@ -7,13 +7,16 @@ For each exercise, don't forget to create a main method to test/run your code.
 
 ## Getting Started
 
-1. Create a new Java blank project in your favorite IDE, JDK 21.
-2. Initialize a new Git repository in your project.
-3. Create a new package `fr.ynov.java` in the `src` folder.
+1. Fork this project on Github (not on Gitea)
+2. Clone the repository on your computer
+3. Open the folder with your favorite IDE (IntelliJ IDEA, Eclipse, etc.) as a Java project
+3. Add the code of the exercises in the corresponding package `fr.ynov.java.XXXX`
+4. For each exercice you will need to add a `public static void main(String[] args)` method in the created class  
+Note that is not the best practice, but it's easier for the training.
 
 ## Exercises - Easy
 
-For all exercises, create a new Java class in the `fr.ynov.java.easy` package.
+For all exercises, create a new Java class inside the `fr.ynov.java.easy` package.
 
 ### 1. Hello World
 
@@ -34,9 +37,12 @@ Add a class "DoWhile" in the package.
 ### 3. Arrays
 
 Create a Java program that creates an array of integers and prints the elements of the array.  
-Add a class "Array" in the package.
+- You can create an empty array with fixed length and put integers inside each index
+- or you can create and instance an array with values directly
 
-Use for and foreach loops to print the elements of the array.
+Add a class "Arrays" in the package.
+
+Use standard for and modern for loops to print the elements of the array.
 
 ### 4. Scanners
 
@@ -48,8 +54,11 @@ Add a class "EvenOrOdd" in the package.
 
 ### 5. Main args
 
-Create a Java program that takes 2 number as arguments, then asking the user for an operator (+, -, *, /) and prints the result of the operation.  
+Create a Java program that takes 2 number from main arguments, then use a Scanner to ask the user for an operator (+, -, *, /) and prints the result of the operation.  
 Add a class "Calculator" in the package.
+
+To run this program, you'll need to update your run configuration to add the arguments or running manually from the command line.
+You can try to verify if the arguments are present before using them, verify their type, etc.
 
 ## Exercises - Medium
 
@@ -76,16 +85,16 @@ Create a class `Person` with the following attributes:
 - `weight` (float)
 - `nationality` (Enum)
 
+Find the documentation about Enum and create a Nationality enum with data for at least 3 countries.
 Create a constructor that takes all the attributes as parameters.  
 Create a method that prints all the attributes of the person.  
 
 Add a class "Person" in the package.
 
+After that, commit and push before starting the next part of this exercise.  
 Updates the `Person` class to remove the age attribute and add a `birthDate` attribute (Date).
 Create a method that calculates the age of the person based on the birthdate.  
 Hint: You can use LocalDate & Period for this.
-
-For testing your class, create a `public static void main(String[] args)` method in the `Person` class.
 
 Reflexion: Looks on the JavaDoc the Record class. What is the difference between a Record and a Class and a Enum?
 
