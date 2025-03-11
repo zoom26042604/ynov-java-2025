@@ -1,4 +1,4 @@
-package fr.ynov.java.medium;
+package fr.ynov.java.medium.ReadFile;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 public class ReadFile {
 
     public static void main(String[] args) {
-        String folderPath = "./src/fr/ynov/java/medium/ok";
+        String folderPath = "./src/fr/ynov/java/medium/ReadFile/ok";
         createFolderWithFiles(folderPath);
         readFilesInFolder(folderPath);
     }
