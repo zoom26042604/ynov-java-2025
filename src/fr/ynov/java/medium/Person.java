@@ -1,6 +1,9 @@
 package fr.ynov.java.medium;
 
-enum Nationality{
+import java.time.LocalDate;
+import java.time.Period;
+
+enum Nationality {
     ENGLISH,
     FRENCH,
     GERMAN,
@@ -8,15 +11,15 @@ enum Nationality{
 
 public class Person {
     private String name;
-    private int age;
+    private LocalDate birthDate;
     private String gender;
     private float height;
     private float weight;
     private Nationality nationality;
 
-    public Person(String name, int age, String gender, float height, float weight, Nationality nationality) {
+    public Person(String name, LocalDate birthDate, String gender, float height, float weight, Nationality nationality) {
         this.name = name;
-        this.age = age;
+        this.birthDate = birthDate;
         this.gender = gender;
         this.height = height;
         this.weight = weight;
@@ -25,15 +28,21 @@ public class Person {
 
     public void printAttributes() {
         System.out.println("Name: " + name);
-        System.out.println("Age: " + age);
+        System.out.println("Age: " + calculateAge() + " years old");
+        System.out.println("Date of Birth: " + birthDate);
         System.out.println("Gender: " + gender);
-        System.out.println("Height: " + height);
-        System.out.println("Weight: " + weight);
+        System.out.println("Height: " + height + " cm");
+        System.out.println("Weight: " + weight + " kg");
         System.out.println("Nationality: " + nationality);
+
+    }
+
+    public int calculateAge() {
+        return Period.between(birthDate, LocalDate.now()).getYears();
     }
 
     public static void main(String[] args) {
-        Person person = new Person("John", 30, "male", 150.0f, 70.0f, Nationality.ENGLISH);
+        Person person = new Person("John", LocalDate.of(1990, 1, 1), "male", 150.0f, 70.0f, Nationality.ENGLISH);
         person.printAttributes();
     }
 }
